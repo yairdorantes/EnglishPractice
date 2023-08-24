@@ -1,5 +1,5 @@
 export default function createQuiz(questionsArray) {
-  const quizWithOptions = questionsArray.map((question) => {
+  let quizWithOptions = questionsArray.map((question) => {
     const incorrectAnswers = questionsArray
       .filter((q) => q !== question)
       .map((q) => q[1]);
@@ -13,19 +13,22 @@ export default function createQuiz(questionsArray) {
     return {
       question: question,
       options: options,
-      section: question[2], // Add the "section" property
+      section: question[2],
+      image: question[3],
+      // Add the "section" property
     };
   });
 
+  quizWithOptions = quizWithOptions.sort(() => Math.random() - 0.5);
   return quizWithOptions;
 }
 
 // const questionsArray = [
-//   ["q1", "r1", "p1"],
-//   ["q2", "r2", "p2"],
-//   ["q3", "r3", "p3"],
-//   ["q4", "r4", "p4"],
-//   ["q5", "r5", "p5"],
+//   ["q1", "r1", "p1", "m1"],
+//   ["q2", "r2", "p2", "m2"],
+//   ["q3", "r3", "p3", "m3"],
+//   ["q4", "r4", "p4", "m4"],
+//   ["q5", "r5", "p5", "m5"],
 // ];
 
 // const quizWithOptions = createQuiz(questionsArray);
