@@ -5,7 +5,7 @@ import Quiz from "../components/Quiz";
 const MyRouter = () => {
   return (
     <Routes>
-      <Route path="main" element={<CreateTest />} />
+      <Route path="" element={<CreateTest />} />
       <Route path="quiz" element={<Quiz />} />
     </Routes>
   );
