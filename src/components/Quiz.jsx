@@ -18,10 +18,7 @@ const Quiz = () => {
 
   return (
     <div className="">
-      <Swiper
-        onSwiper={(e) => setSwiper(e)}
-        // allowTouchMove={false}
-      >
+      <Swiper onSwiper={(e) => setSwiper(e)} allowTouchMove={false}>
         {quizData &&
           quizData.map((item, i) => (
             <SwiperSlide key={i}>

@@ -62,12 +62,18 @@ const Question = ({ data }) => {
         ))}
         <div
           className={`fixed ${
-            isAnswered ? "-bottom-0" : "-bottom-72"
-          }   p-1 max-w-lg transition-all duration-500 `}
+            isAnswered ? "-bottom-0" : "-bottom-full"
+          }   p-1 max-w-lg transition-all duration-1000 `}
         >
           <div className="relative">
-            <img className="rounded-lg  " src={data.question[3]} alt="" />
-            <div className="absolute backdrop-blur-sm  bg-black bottom-0 w-full bg-opacity-70 py-4 text-center text-white font-bold capitalize">
+            {/* <div className="bg-white w-"></div> */}
+            <img
+              className="rounded-lg max-w-xs"
+              // src="https://images.idgesg.net/images/article/2017/09/speedometer-fast-drive-100735078-large.jpg?auto=webp&quality=85,70"
+              src={data.question[3]}
+              alt="meaning"
+            />
+            <div className="absolute backdrop-blur-sm rounded-b-lg  bg-black bottom-0 w-full bg-opacity-70 py-4 text-center text-white font-bold capitalize">
               {data.question[0]}
             </div>
           </div>
